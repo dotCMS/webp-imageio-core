@@ -4,7 +4,7 @@ Java Image I/O reader and writer for the Google WebP image format-  includes the
 
 This is based on [webp project of Luciad](https://bitbucket.org/luciad/webp-imageio) 0.4.2) 
 
-### Gradle 
+### Gradle  (using jitpack)
 
 
 ```
