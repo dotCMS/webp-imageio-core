@@ -1,5 +1,5 @@
 # webp-imageio-core
-Forked from nintha/webp-imageio-core with rebuild native libraries for linux/osx/windows. This is a 
+Forked from nintha/webp-imageio-core with rebuilt native libraries for linux/osx/windows. This is a 
 Java Image I/O reader and writer for the Google WebP image format.  The jar is ready to use and includes the system lib files.
 
 This is based on [webp project of Luciad](https://bitbucket.org/luciad/webp-imageio) 0.4.2) 
