@@ -42,6 +42,3 @@ dependencies {
       writer.write(null, new IIOImage(ImageIO.read(file), null, null), writeParam);
       writer.dispose();
 ```
-
-### Issues
-It does not 
