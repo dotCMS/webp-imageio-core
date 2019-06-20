@@ -15,7 +15,7 @@ repositories {
 
 
 dependencies {
-    compile 'com.github.wezell:webp-imageio-core:v0.1.2'
+    compile 'com.github.dotcms:webp-imageio-core:v0.1.2'
 }
 ```
 
