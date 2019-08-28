@@ -181,7 +181,6 @@ public class VP8Frame {
 		segmentationIsEnabled = bc.readBit();
 		logger.log("segmentation_enabled: " + segmentationIsEnabled);
 		if (segmentationIsEnabled > 0) {
-			logger.error("TODO");
 			updateMacroBlockSegmentationMap = bc.readBit();
 			updateMacroBlockSegmentatonData = bc.readBit();
 			logger.log("update_mb_segmentaton_map: "+updateMacroBlockSegmentationMap);

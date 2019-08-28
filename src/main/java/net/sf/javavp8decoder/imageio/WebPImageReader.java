@@ -151,7 +151,11 @@ public class WebPImageReader extends ImageReader implements
 	public void readAborted(ImageReader source) {
 	}
 
+	
 	public void readHeader() throws IIOException {
+	  if(this.metadata!=null) {
+	    return;
+	  }
 		if (stream == null) {
 			throw new IllegalStateException("No input stream");
 		}
