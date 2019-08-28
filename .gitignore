@@ -34,3 +34,8 @@ logs/
 # system ignore
 .DS_Store
 Thumbs.db
+/.gradle/
+/build/
+/bin/
+/build/
+/.gradle/
