@@ -1,4 +1,4 @@
-package example;
+package webp;
 
 import com.luciad.imageio.webp.WebPWriteParam;
 
@@ -6,16 +6,25 @@ import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageWriter;
 import javax.imageio.stream.FileImageOutputStream;
+
+import org.junit.Test;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 public class EncodeTest {
-    public static void main(String args[]) throws IOException {
+  @Test
+  public void test_writing() throws IOException {
         String inputPngPath = "test_pic/test.png";
         String inputJpgPath = "test_pic/test.jpg";
-        String outputWebpPath = "test_pic/test_.webp";
+        String outputWebpPath = "test_pic/test_encode.webp";
 
+        
+        new File(outputWebpPath).delete();
+
+        
+        
         // Obtain an image to encode from somewhere
         BufferedImage image = ImageIO.read(new File(inputJpgPath));
 

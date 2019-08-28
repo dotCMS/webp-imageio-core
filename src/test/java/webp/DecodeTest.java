@@ -1,21 +1,32 @@
-package example;
+package webp;
 
 import com.luciad.imageio.webp.WebPReadParam;
 
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.FileImageInputStream;
+
+import org.junit.Test;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 public class DecodeTest {
-    public static void main(String args[]) throws IOException {
+  
+  
+  @Test
+  public void test_reading() throws IOException {
         String inputWebpPath = "test_pic/test.webp";
-        String outputJpgPath = "test_pic/test_.jpg";
-        String outputJpegPath = "test_pic/test_.jpeg";
-        String outputPngPath = "test_pic/test_.png";
+        String outputJpgPath = "test_pic/test_decode.jpg";
+        String outputJpegPath = "test_pic/test_decode.jpeg";
+        String outputPngPath = "test_pic/test_decode.png";
 
+        
+        new File(outputPngPath).delete();
+        new File(outputJpgPath).delete();
+        new File(outputJpegPath).delete();
+        
         // Obtain a WebP ImageReader instance
         ImageReader reader = ImageIO.getImageReadersByMIMEType("image/webp").next();
 
