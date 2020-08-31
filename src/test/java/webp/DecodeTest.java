@@ -1,11 +1,12 @@
 package webp;
 
+import com.luciad.imageio.webp.WebP;
 import com.luciad.imageio.webp.WebPReadParam;
 
 import javax.imageio.ImageIO;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.FileImageInputStream;
-
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.awt.image.BufferedImage;
@@ -14,7 +15,10 @@ import java.io.IOException;
 
 public class DecodeTest {
   
-  
+    @BeforeClass
+    public static void loadWebP() {
+        WebP.loadNative();
+    }
   @Test
   public void test_reading() throws IOException {
         String inputWebpPath = "test_pic/test.webp";

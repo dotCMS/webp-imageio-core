@@ -20,12 +20,22 @@ import org.scijava.nativelib.NativeLibraryUtil;
 import java.io.IOException;
 import java.nio.ByteOrder;
 
-final class WebP {
+public final class WebP {
   private static boolean NATIVE_LIBRARY_LOADED = false;
 
+  
+  public static boolean loadNative() {
+      return true;
+      
+  }
+  
+  
   static synchronized void loadNativeLibrary() {
     if (!NATIVE_LIBRARY_LOADED) {
       NATIVE_LIBRARY_LOADED = true;
+      System.err.println(" - loading webp for:" +NativeLibraryUtil.getArchitecture().name());
+      
+      
       NativeLibraryUtil.loadNativeLibrary(WebP.class, "webp-imageio");
     }
   }
